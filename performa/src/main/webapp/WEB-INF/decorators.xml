@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>/res/*</pattern>
+		<pattern>/*.json</pattern>
+		<pattern>*/attach.html*</pattern>
+	</excludes>
+	<decorator name="cms-theme" page="cms-theme.jsp">
+		<pattern>/*.html</pattern>
+	</decorator>
+</decorators>

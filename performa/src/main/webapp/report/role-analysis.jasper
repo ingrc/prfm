@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2014-12-18T09:16:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="role-analysis" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00fa1222-c167-440b-bd9e-70230b343e2e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SQLServer-PERFORMA"/>
+	<parameter name="logo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["http://localhost:8080/performa/img/logo-beraucoal-report.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="subreportParameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM VW_REPORT_ROLE_ANALYSIS]]>
+	</queryString>
+	<field name="ROLE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="80" width="798" height="30" uuid="39f4f96c-a926-4229-9456-1c6e079d93af">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Role Analysis Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="179" height="79" uuid="c0c6961b-94cb-40ef-92d4-93d02ca8b79e"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="94" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="320" height="20" uuid="a34ced6c-4b13-4f87-8daf-c376d992713b"/>
+				<textFieldExpression><![CDATA["SAP ROLE: " + $F{ROLE}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="20" width="730" height="70" uuid="2b52a478-eaa7-44f8-836b-1332cc2a8341"/>
+				<subreportParameter name="ROLE">
+					<subreportParameterExpression><![CDATA[$F{ROLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreportParameter}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="700" y="18" width="100" height="19" uuid="d21ce76b-476a-4532-941f-1d6c6bae53ea"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="18" width="206" height="19" uuid="eaf713e3-087c-4a13-80fe-18e87c055abb"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
