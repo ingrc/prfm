@@ -201,11 +201,11 @@ public class ReportGeneratorController extends BaseController {
 		
 		if (reportType.contains("excel")){
 			response.setContentType("application/vnd.ms-excel");
-			response.setHeader( "Content-Disposition", "filename="+reportModel.getReportName().replace(" ", "-")+".xls");
+			response.setHeader( "Content-Disposition", "filename=\""+reportModel.getReportName().replace(" ", "-")+".xls\"");
 			
 		} else {
 			response.setContentType("application/pdf");
-			response.setHeader( "Content-Disposition", "filename="+reportModel.getReportName().replace(" ", "-")+".pdf");
+			response.setHeader( "Content-Disposition", "filename=\""+reportModel.getReportName().replace(" ", "-")+".pdf\"");
 			
 		}
 		
