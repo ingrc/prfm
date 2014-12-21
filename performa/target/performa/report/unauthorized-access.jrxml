@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
-<!-- 2014-11-16T17:47:38 -->
+<!-- 2014-12-19T17:09:25 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="unauthorized-access" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1521b88-a9ba-49cd-a6d2-7e08238926dc">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SQLServer-PERFORMA"/>
 	<parameter name="logo" class="java.lang.String">
@@ -46,7 +46,7 @@
 			<staticText>
 				<reportElement x="0" y="80" width="798" height="30" uuid="5c07c6bc-f72b-4d82-9fb4-9d2a54cd2041"/>
 				<textElement textAlignment="Center">
-					<font size="20"/>
+					<font size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ACCESS RISK - UNAUTHORIZED ACCESS]]></text>
 			</staticText>
@@ -60,83 +60,107 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="0" width="102" height="30" uuid="0b490f2d-c6ea-45f5-8bf5-a15467c483f5"/>
+				<reportElement mode="Opaque" x="0" y="0" width="102" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="0b490f2d-c6ea-45f5-8bf5-a15467c483f5"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Username]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="102" y="0" width="100" height="30" uuid="ecb54069-b6e6-45bb-a02e-f4f8d0a001b2"/>
+				<reportElement mode="Opaque" x="102" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="ecb54069-b6e6-45bb-a02e-f4f8d0a001b2"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Full Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="202" y="0" width="100" height="30" uuid="124e5521-930b-4f64-b9fe-a1180b964267"/>
+				<reportElement mode="Opaque" x="202" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="124e5521-930b-4f64-b9fe-a1180b964267"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Valid Through]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="302" y="0" width="100" height="30" uuid="b7b5946e-e6f7-4aa5-82f9-72ee085f37f9"/>
+				<reportElement mode="Opaque" x="302" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="b7b5946e-e6f7-4aa5-82f9-72ee085f37f9"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[User Type]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="402" y="0" width="100" height="30" uuid="229c2634-c571-40b7-bfba-5bb1a5630e54"/>
+				<reportElement mode="Opaque" x="402" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="229c2634-c571-40b7-bfba-5bb1a5630e54"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[User Group]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="502" y="0" width="100" height="30" uuid="064653d6-4d25-4cbb-b5c5-1463b5826887"/>
+				<reportElement mode="Opaque" x="502" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="064653d6-4d25-4cbb-b5c5-1463b5826887"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[User Lock]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="602" y="0" width="100" height="30" uuid="4b22a6c4-e273-45ef-8f83-75895222b670"/>
+				<reportElement mode="Opaque" x="602" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="4b22a6c4-e273-45ef-8f83-75895222b670"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Creator]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="702" y="0" width="100" height="30" uuid="2eca20e9-47fc-4967-9107-9bf48df51cb9"/>
+				<reportElement mode="Opaque" x="702" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="2eca20e9-47fc-4967-9107-9bf48df51cb9"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Creation Date]]></text>
 			</staticText>
 		</band>

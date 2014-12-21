@@ -39,13 +39,19 @@
 											<td>${row.reportName}</td>
 											<td align="center">${row.lastGenerate}</td>
 											<td>${row.status}</td>
-											<td align="center"><a title="Generate Report"
+											<td align="center">
+												
+												<%-- <a title="Generate Report"
 												href="<c:url value="/report/list.html?reportType=${row.reportCode}" />"
 												class="btn btn-info"><i class="fa fa-cogs"></i> </a> 
-												<a href="<c:url value="/report/get?reportType=${row.reportCode}" />" 
-													target="_blank"
-													title="Download Report" class="btn btn-info"><i
-													class="imoon imoon-settings"></i></a></td>
+												 --%>
+												<c:if test="${row.reportOuput != null }">
+													<a href="<c:url value="/report/get?reportType=${row.reportCode}" />" 
+														target="_blank"
+														title="Download Report" class="btn btn-info"><i
+														class="imoon imoon-download"></i></a>
+												</c:if>		
+											</td>
 										</tr>
 									</c:forEach>
 

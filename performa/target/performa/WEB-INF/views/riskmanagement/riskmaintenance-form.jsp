@@ -155,10 +155,12 @@
 											<label class="col-sm-3 control-label" for="fid1"><spring:message
 													code="riskmaintenance.form.fid1" /> </label>
 											<div class="col-sm-9">
+												
 												<form:select path="fid1" id="fid1" cssClass="form-control">
 													<form:option value="${null}">--Select--</form:option>
-													<form:options items="${acFuncList }" itemLabel="text"
-														itemValue="fid" />
+													<c:forEach items="${acFuncList }" var="row">
+														<form:option value="${row.fid }">${row.fid} - ${row.text }</form:option>
+													</c:forEach>
 												</form:select>
 												<form:errors path="fid1" cssClass="help-block" />
 											</div>
@@ -169,8 +171,9 @@
 											<div class="col-sm-9">
 												<form:select path="fid2" id="fid2" cssClass="form-control">
 													<form:option value="${null}">--Select--</form:option>
-													<form:options items="${acFuncList }" itemLabel="text"
-														itemValue="fid" />
+													<c:forEach items="${acFuncList }" var="row">
+														<form:option value="${row.fid }">${row.fid} - ${row.text }</form:option>
+													</c:forEach>
 												</form:select>
 												<form:errors path="fid2" cssClass="help-block" />
 											</div>
@@ -181,8 +184,9 @@
 											<div class="col-sm-9">
 												<form:select path="fid3" id="fid3" cssClass="form-control">
 													<form:option value="${null}">--Select--</form:option>
-													<form:options items="${acFuncList }" itemLabel="text"
-														itemValue="fid" />
+													<c:forEach items="${acFuncList }" var="row">
+														<form:option value="${row.fid }">${row.fid} - ${row.text }</form:option>
+													</c:forEach>
 												</form:select>
 												<form:errors path="fid3" cssClass="help-block" />
 											</div>
@@ -193,8 +197,9 @@
 											<div class="col-sm-9">
 												<form:select path="fid4" id="fid4" cssClass="form-control">
 													<form:option value="${null}">--Select--</form:option>
-													<form:options items="${acFuncList }" itemLabel="text"
-														itemValue="fid" />
+													<c:forEach items="${acFuncList }" var="row">
+														<form:option value="${row.fid }">${row.fid} - ${row.text }</form:option>
+													</c:forEach>
 												</form:select>
 												<form:errors path="fid4" cssClass="help-block" />
 											</div>
@@ -205,8 +210,9 @@
 											<div class="col-sm-9">
 												<form:select path="fid5" id="fid5" cssClass="form-control">
 													<form:option value="${null}">--Select--</form:option>
-													<form:options items="${acFuncList }" itemLabel="text"
-														itemValue="fid" />
+													<c:forEach items="${acFuncList }" var="row">
+														<form:option value="${row.fid }">${row.fid} - ${row.text }</form:option>
+													</c:forEach>
 												</form:select>
 												<form:errors path="fid5" cssClass="help-block" />
 											</div>

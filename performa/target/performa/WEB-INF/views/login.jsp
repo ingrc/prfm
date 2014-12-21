@@ -176,29 +176,7 @@
 		</div>
 	</div>
 
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6">
-					<ul class="list-inline">
-						<li>&copy; <a href="index.html">Intersect</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-6">
-					<ul class="list-inline social-network">
-						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-github-square"></i></a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- /.row -->
-		</div>
-		<!-- /.container -->
-	</footer>
-
-	<!-- jQuery -->
+		<!-- jQuery -->
 	<script src='<c:url value="/js/libs/jquery-1.11.0.min.js"></c:url>'></script>
 
 	<!-- Bootstrap core JavaScript -->

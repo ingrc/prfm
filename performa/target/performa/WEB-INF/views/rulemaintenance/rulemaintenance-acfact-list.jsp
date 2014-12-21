@@ -49,6 +49,20 @@
 								</p>
 								
 								<div>
+									<b>Select Business Process :</b>
+									<select id="businessProcessSelect">
+										<option value=${null }>Select Business Process</option>
+										<c:forEach items="${businessProcessList }" var="row">
+											<c:choose>
+												<c:when test="${row.bprc == selectedBprc }">
+													<option value="${row.bprc }" selected="selected">${row.text }</option>
+												</c:when>
+												<c:otherwise>
+													<option value="${row.bprc }" >${row.bprc } - ${row.text }</option>
+												</c:otherwise>
+											</c:choose>
+										</c:forEach>
+									</select><br/>
 									<b>Select Function :</b>
 									<select id="functionSelect"  onchange="location='?fid='+this.options[this.selectedIndex].value;">
 										<option value=${null }>Select Function</option>
@@ -58,7 +72,7 @@
 													<option value="${row.fid }" selected="selected">${row.text }</option>
 												</c:when>
 												<c:otherwise>
-													<option value="${row.fid }" >${row.text }</option>
+													<option value="${row.fid }" >${row.fid } - ${row.text }</option>
 												</c:otherwise>
 											</c:choose>
 											
@@ -88,7 +102,7 @@
 															value="${model.fid}-${model.tcode}">
 													</div>
 												</td>
-												<td>${model.fidtext}</td>
+												<td>${model.fid } - ${model.fidtext}</td>
 												<td>${model.tcode} - ${model.tcodetext }</td>
 												<td>${model.stat }</td>
 												<td align="center"><a
@@ -119,5 +133,37 @@
 			<!-- /.row -->
 		</div>
 	</form>
+	<script type="text/javascript">
+			$(document)
+					.ready(
+							function() {
+								$("select[id='businessProcessSelect']")
+										.change(
+												function() {
+													var bprc = $(this).val();
+
+													$
+															.ajax({
+																type : "GET",
+																url : '<c:url value="/rulemaintenance-acfact/functionlist/"/>'
+																		+ bprc,
+																success : function(
+																		data) {
+																	var sel = $("select[id='functionSelect']");
+																	sel.empty();
+																	sel.append('<option>Select Function</option>');
+																	for (var i = 0; i < data.length; i++) {
+																		sel
+																				.append('<option value="' + data[i].fid + '">' +
+																						data[i].fid + " - " + data[i].text
+																						+ '</option>');
+																	}
+																	sel
+																			.selectpicker('refresh');
+																}
+															});
+												});
+							});
+		</script>
 </body>
 </html>

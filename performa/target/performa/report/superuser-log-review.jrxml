@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
-<!-- 2014-11-16T17:46:33 -->
+<!-- 2014-12-19T17:08:36 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="superuser-log-review" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3c7baee6-ce2b-42ee-8d29-d24f23580637">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SQLServer-PERFORMA"/>
 	<parameter name="logo" class="java.lang.String">
@@ -41,7 +41,7 @@
 			<staticText>
 				<reportElement x="0" y="80" width="798" height="30" uuid="6473212b-507b-4451-a212-bdb04ada84c0"/>
 				<textElement textAlignment="Center">
-					<font size="20"/>
+					<font size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Super User Log Review]]></text>
 			</staticText>
@@ -55,80 +55,80 @@
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="0" width="137" height="30" uuid="bf03b0bd-bc15-453a-abc0-51a0bd0c36cf"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="137" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="bf03b0bd-bc15-453a-abc0-51a0bd0c36cf"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TCode]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="137" y="0" width="133" height="30" uuid="dcc12ed9-79f2-41cc-8309-68c9c1b18c80"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="137" y="0" width="133" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="dcc12ed9-79f2-41cc-8309-68c9c1b18c80"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Transaction Code]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="270" y="0" width="133" height="30" uuid="ef9b0e86-e09a-4026-b7b0-9fba54aa9a50"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="270" y="0" width="133" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="ef9b0e86-e09a-4026-b7b0-9fba54aa9a50"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Username]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="403" y="0" width="133" height="30" uuid="403ab860-e8de-450e-a40d-3f5237a154da"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="133" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="403ab860-e8de-450e-a40d-3f5237a154da"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Full Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="536" y="0" width="133" height="30" uuid="0ee7a341-8ac5-4cb0-8d4c-a3450ff8c4cd"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="536" y="0" width="133" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="0ee7a341-8ac5-4cb0-8d4c-a3450ff8c4cd"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[HR Position]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="669" y="0" width="133" height="30" uuid="44dfe410-4548-4252-a470-fe2857773357"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="669" y="0" width="133" height="30" forecolor="#FFFFFF" backcolor="#000000" uuid="44dfe410-4548-4252-a470-fe2857773357"/>
 				<box padding="3">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement>
-					<font isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[OPType]]></text>
 			</staticText>
