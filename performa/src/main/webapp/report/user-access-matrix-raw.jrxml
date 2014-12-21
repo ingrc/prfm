@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
-<!-- 2014-12-19T17:10:39 -->
+<!-- 2014-12-21T13:20:38 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="user-access-matrix-raw" pageWidth="595" pageHeight="842" columnWidth="450" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cd08d928-1b22-4ec3-90f8-4d4a34bed45f">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SQLServer-PERFORMA"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -349,7 +349,7 @@
 	</queryString>
 	<field name="HR_POSITION" class="java.lang.String"/>
 	<field name="TCODE_MATRIX" class="java.lang.String"/>
-	<field name="CNT" class="java.lang.Integer"/>
+	<field name="FLAG" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -473,7 +473,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA[$F{CNT}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{FLAG}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
