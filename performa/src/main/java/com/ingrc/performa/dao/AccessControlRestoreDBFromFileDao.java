@@ -275,7 +275,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					// countSuccess=0;
 					int[] updateCount = ex.getUpdateCounts();
@@ -392,7 +392,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					// countSuccess=0;
 					int[] updateCount = ex.getUpdateCounts();
@@ -517,7 +517,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 
 					int[] updateCount = ex.getUpdateCounts();
@@ -633,7 +633,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					// countSuccess=0;
 					int[] updateCount = ex.getUpdateCounts();
@@ -754,7 +754,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -865,7 +865,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -978,7 +978,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1103,7 +1103,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1219,7 +1219,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1332,7 +1332,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1481,7 +1481,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1594,7 +1594,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1708,7 +1708,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1823,7 +1823,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -1939,7 +1939,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2100,7 +2100,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2224,7 +2224,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2340,7 +2340,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2458,7 +2458,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2574,7 +2574,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2686,7 +2686,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2804,7 +2804,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -2919,7 +2919,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -3047,7 +3047,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -3185,7 +3185,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -3320,7 +3320,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -3445,7 +3445,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {
@@ -3602,7 +3602,7 @@ public class AccessControlRestoreDBFromFileDao extends JdbcDaoSupport {
 							countSuccess = countSuccess + suc;
 						}
 					}
-					System.out.println("Counter=" + count);
+					
 				} catch (BatchUpdateException ex) {
 					int[] updateCount = ex.getUpdateCounts();
 					for (int i : updateCount) {

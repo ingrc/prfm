@@ -17,7 +17,7 @@
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
-						<div class="col-xs-12">this is landing page</div>
+						<div class="col-xs-12">[edit] this is landing page</div>
 					</div>
 				</div>
 			</div>
