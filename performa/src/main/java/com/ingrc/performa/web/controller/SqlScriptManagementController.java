@@ -56,6 +56,7 @@ public class SqlScriptManagementController {
 		}
 		
 		String formStat = request.getParameter("formStat");
+		logger.debug("*** fromstat ["+formStat+"]");
 		if (formStat.equalsIgnoreCase("update")){
 			sqlScriptService.update(sqlModel);
 		} else {

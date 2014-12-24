@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.sql.DataSource;
@@ -33,7 +34,9 @@ import org.springframework.stereotype.Component;
 
 import com.ingrc.performa.dao.ReportDataGeneratorDao;
 import com.ingrc.performa.model.INGRCReport;
+import com.ingrc.performa.model.INGRCSqlScriptModel;
 import com.ingrc.performa.service.ReportService;
+import com.ingrc.performa.service.SqlScriptService;
 import com.ingrc.performa.web.controller.BaseController;
 
 @Component
@@ -49,30 +52,39 @@ public class DataUploaderScheduler extends BaseController {
 	@Autowired
 	private DataSource dataSource;
 	
+	@Autowired
+	private SqlScriptService sqlScriptService;
+	
 	private static final String UPLOADER_SQL_SCRIPT = "report-script.sql";
 	private String reportPath = REPORT_BASE_FOLDER + BaseController.REPORT_JASPER_FOLDER;
 	private String outputPath = REPORT_BASE_FOLDER + BaseController.REPORT_OUTPUT_FOLDER;
 	
 	private static final Logger logger = Logger.getLogger(DataUploaderScheduler.class);
 	
-	@Scheduled(cron="* */5 * * * *")
+	@Scheduled(cron="* */15 * * * *")
 	public void runScheduler(){
-		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(UPLOADER_SQL_SCRIPT);
-
-		BufferedReader reader = null;
-		reader = new BufferedReader(new InputStreamReader(inputStream));
+//		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(UPLOADER_SQL_SCRIPT);
+//
+//		BufferedReader reader = null;
+//		reader = new BufferedReader(new InputStreamReader(inputStream));
+//		
+//		String line="";
+//		try {
+//			reportService.resetStatus("Uploading data");
+//			while ((line = reader.readLine()) != null) {
+//				logger.info("executing script ["+line+"] at ["+new Date()+"]");
+//				reportDataGeneratorDao.execScript(line);
+//			}
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		String line="";
-		try {
-			reportService.resetStatus("Uploading data");
-			while ((line = reader.readLine()) != null) {
-				logger.info("executing script ["+line+"] at ["+new Date()+"]");
-				reportDataGeneratorDao.execScript(line);
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		for (INGRCSqlScriptModel model:sqlScriptService.list()){
+			logger.info("executing script ["+model.getName()+"] ["+model.getSqlScript()+"] at ["+new Date()+"]");
+			reportDataGeneratorDao.execScript(model.getSqlScript());
 		}
+		
 		reportService.resetStatus("Ready");
 		logger.info("Generating all reports");
 		generateReport("role-analysis");

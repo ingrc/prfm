@@ -39,6 +39,7 @@
 													code="sqlscript.form.id" /> </label>
 											<div class="col-sm-9">
 												<p class="form-control-static">${formModel.id}</p>
+												<form:hidden path="id"/>
 											</div>
 										</div>
 										<div class="form-group">
