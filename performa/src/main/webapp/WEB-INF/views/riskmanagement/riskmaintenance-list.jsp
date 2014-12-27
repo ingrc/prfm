@@ -77,8 +77,8 @@
 													</div>
 												</td>
 												<td>
-													<c:if test="${riskModel.stat == 1}">Active</c:if>
-													<c:if test="${riskModel.stat != 1}">Not Active</c:if>
+													<c:if test="${riskModel.stat == 0}">Active</c:if>
+													<c:if test="${riskModel.stat == 1}">Inactive</c:if>
 												</td>
 												<td>${riskModel.riskid}</td>
 												<td>${riskModel.text}</td>

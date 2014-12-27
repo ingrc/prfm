@@ -1,6 +1,7 @@
 package com.ingrc.performa.web.controller;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -46,11 +47,14 @@ public class AccessControlRestoreDBFromFileController extends BaseController {
 	@RequestMapping(value="/form.html", method=RequestMethod.GET)
 	public String doForm(Model model, HttpServletRequest request){
 		
+		String fileToDBFolderStr = BASE_UPLOAD_FOLDER + File.separator + FILE_TO_DB_FOLDER;
+		
+		
 		AccessControlRestoreDBFromFileDto acuDto = new AccessControlRestoreDBFromFileDto();
 		model.addAttribute(LIST_TABLENAME_DROP_DOWN,
 				dataReferenceService.getAccessControlTableNameList());
 		model.addAttribute(LIST_FILE_DROP_DOWN,
-				dataReferenceService.getFileList(BASE_UPLOAD_FOLDER + File.separator + FILE_TO_DB_FOLDER));
+				dataReferenceService.getFileList(fileToDBFolderStr));
 		
 		model.addAttribute("formModel", acuDto);
 		return ACCESSCONTROL_FOLDER + "/accesscontrol-form";

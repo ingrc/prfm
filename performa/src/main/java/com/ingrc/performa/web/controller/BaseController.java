@@ -1,5 +1,6 @@
 package com.ingrc.performa.web.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -49,6 +50,19 @@ public class BaseController {
 		BASE_UPLOAD_FOLDER = prop.getProperty("base.upload.folder");
 		REPORT_BASE_FOLDER = prop.getProperty("base.report.folder");
 		LOGO_URL =  prop.getProperty("report.logo.url");
+		
+		File fileToDB = new File( BASE_UPLOAD_FOLDER + File.separator + FILE_TO_DB_FOLDER);
+		
+		if (fileToDB.exists() == false){
+			fileToDB.mkdirs();
+		}
+		
+		File fileUploadFolder = new File( BASE_UPLOAD_FOLDER + File.separator + UPLOAD_FOLDER);
+		
+		if (fileUploadFolder.exists() == false){
+			fileUploadFolder.mkdirs();
+		}
+		
 		
 	}
 }
