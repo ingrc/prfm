@@ -92,6 +92,7 @@ public class DataUploaderScheduler extends BaseController {
 		generateReport("saptu-tcodeassign");
 		generateReport("saptu-unused");
 		generateReport("superuser-log");
+		generateReport("superuser-log-excel");
 		generateReport("unauth-access");
 		generateReport("user-access-matrix");
 		generateReport("user-access-matrix-excel");
@@ -154,6 +155,13 @@ public class DataUploaderScheduler extends BaseController {
 		if (reportType.equalsIgnoreCase("superuser-log")){
 			reportOutput =outputPath + "/superuser-log-review.pdf";
 			generateSingleReport(reportType,
+					reportPath + "/superuser-log-review.jrxml",
+					reportOutput
+					);
+		}
+		if (reportType.equalsIgnoreCase("superuser-log-excel")){
+			reportOutput = outputPath + "/superuser-log-excel.xls";
+			generateSingleReportExcel(reportType,
 					reportPath + "/superuser-log-review.jrxml",
 					reportOutput
 					);
