@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +25,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
+import com.ingrc.performa.Validation;
 import com.ingrc.performa.component.LoggedUserInterceptor;
 import com.ingrc.performa.service.WebUserService;
 
@@ -31,6 +33,8 @@ import com.ingrc.performa.service.WebUserService;
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.ingrc.performa.web.controller" })
 public class WebConfig extends WebMvcConfigurerAdapter {
+	
+	private static Logger logger = Logger.getLogger(WebConfig.class);
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -75,6 +79,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean
 	public ViewResolver viewResolver() {
+
+		Validation validation = new Validation();
+		if (validation.validate() == false){
+			logger.error("WARNING!!!, the license may be wrong, please contact your application provider!");
+			return null;
+		}
+		
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setOrder(2);
 		viewResolver.setViewClass(JstlView.class);
